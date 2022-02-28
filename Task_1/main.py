@@ -9,7 +9,6 @@ for i in range(len(n)):
         print('неверная последовательность скобок ')
         break
 
-
 if summa < 0:
     print('Имеется не открытая скобка ')
 elif summa > 0:
