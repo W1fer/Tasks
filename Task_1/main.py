@@ -1,11 +1,18 @@
 n = input()
+summa = 0
+for i in range(len(n)):
+    if n[i] == '(':
+        summa += 1
+    elif n[i] == ')':
+        summa -= 1
+    if summa == -1:
+        print('неверная последовательность скобок ')
+        break
 
-if n.find(')') < n.find('('):
-    print('неверная последовательность скобок ')
-elif n.count('(') > n.count(')'):
-    print(f'Имеется не закрытая скобка ')
-elif n.count('(') < n.count(')'):
-    print('Лишняя закрывающая скобка ')
+
+if summa < 0:
+    print('Имеется не открытая скобка ')
+elif summa > 0:
+    print('Имеется не закрытая скобка')
 else:
-    print('Все Ок')
-
+    print('Все ок')
