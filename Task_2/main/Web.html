@@ -16,7 +16,7 @@
 <p><span class="error">* required field</span></p>
     <div class="form-wrapper">
 
-        <form method="post" enctype="multipart/form-data">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                 <p class="contact-form__title">Расскажите о себе </p>
                 <p class="contact-form__description"></p>
 
